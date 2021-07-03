@@ -1,25 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Car : Vehicle
+    public class Car : IGroundVehicle
     {
-        /*public int weigth;
-        public int height;
-        public int width;
-        public int price;
-        public int maxSpeed;
-        public void Start()
+        public VehicleData data;
+        public Car(int maxSpeed)
         {
-
+            data.weigth = Program.rand.Next(10, 20);
+            data.maxSpeed = maxSpeed;
         }
-        public void Stop()
-        {
-
-        }*/
+        public void Drive()
+            => Console.WriteLine($"I am driving Car with max speed {data.maxSpeed}/h with weight {data.weigth} tonns");
+        public override string ToString()
+            => $"Car data: \n{data}";
     }
 }

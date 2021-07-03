@@ -1,25 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Bus : Vehicle
+    public class Bus : IGroundVehicle
     {
-        /*public int weigth;
-        public int height;
-        public int width;
-        public int price;
-        public int maxSpeed;
-        public void Start()
-        {
-
-        }
-        public void Stop()
-        {
-
-        }*/
+        public VehicleData data;
+        public void Drive()
+            => Console.WriteLine($"I am driving {GetType()}");
+        public override string ToString()
+            => $"Bus data: \n{data}";
     }
 }

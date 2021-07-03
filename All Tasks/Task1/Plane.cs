@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Plane : Vehicle
+    class Plane : IGroundVehicle, IFlyVehicle
     {
-        /*public int weigth;
-        public int height;
-        public int width;
-        public int price;
-        public int maxSpeed;
-        public void Start()
-        {
+        public VehicleData data;
+        public void Drive()
+            => Console.WriteLine($"I am driving {GetType()}");
 
-        }
-        public void Stop()
-        {
+        public void Fly()
+            => Console.WriteLine($"I am flying!");
 
-        }*/
+        public override string ToString()
+            => $"Plane data: \n{data}";
     }
 }

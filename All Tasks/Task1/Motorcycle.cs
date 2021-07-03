@@ -1,25 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Task1
 {
-    class Motorcycle : Vehicle
+    public class Motorcycle : IGroundVehicle
     {
-        /*public int weigth;
-        public int height;
-        public int width;
-        public int price;
-        public int maxSpeed;
-        public void Start()
+        public VehicleData data;
+        public Motorcycle(int maxSpeed)
         {
-
+            data.maxSpeed = maxSpeed;
         }
-        public void Stop()
-        {
-
-        }*/
+        public void Drive()
+            =>Console.WriteLine($"I am driving Motorcycle with max speed {data.maxSpeed}/h");
+        public override string ToString()
+            => $"Motorcycle data: \n{data}";
     }
 }
